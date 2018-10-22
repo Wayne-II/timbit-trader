@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Notable');
+@font-face {
+  font-family: CoffeeService;
+  font-style:normal;
+  font-weight:400;
+  src:
+    local( 'CoffeeService' ),
+    url( ../fonts/CoffeeService.otf ) format( 'opentype' )
+}
