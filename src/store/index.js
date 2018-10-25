@@ -1,12 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import user from './user/reducers';
-import { authApi } from 'store/user/api';
+import { authApi } from 'store/user/middleware';
 import { asyncResolved } from 'store/middleware/asyncResolved';
+import { createLogger } from 'redux-logger';
 
 export default function configureStore( preloadedState ){
   const middlewares = [
     authApi,
-    asyncResolved
+    asyncResolved,
+    createLogger()
   ]
 
   const store = createStore(

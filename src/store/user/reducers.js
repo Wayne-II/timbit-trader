@@ -3,13 +3,24 @@ import { relevantType } from '../util';
 import {
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
-  AUTH_LOGIN_REQUEST
+  AUTH_LOGIN_REQUEST,
+  AUTH_STATUS_SUCCESS,
+  AUTH_STATUS_FAILURE,
+  AUTH_STATUS_REQUEST
 } from './actiontypes.js';
 
 const auth = ( state = { token:undefined }, action ) => {
   if( relevantType( action, AUTH_LOGIN_SUCCESS ) ){
-    console.log( AUTH_LOGIN_SUCCESS, action )
+    console.log( 'auth reducer', AUTH_LOGIN_SUCCESS, action )
     return { token: action.payload.token }
+  }
+  return state;
+}
+
+const status = ( state  = { name:'Guest', email:'None' }, action ) =>  {
+  if( relevantType( action, AUTH_STATUS_SUCCESS ) ){
+    console.log( 'status action', action )
+    return {  ...action.payload };
   }
   return state;
 }
