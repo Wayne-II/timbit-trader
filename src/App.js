@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     const { token } = this.props;
 
-    const Content = token ? <div>authentication success</div> : <Auth />;
+    const Content = token ? <CardList /> : <Auth />;
 
     return (
       <div style={ styles.app } className="App">
@@ -42,7 +42,6 @@ class App extends Component {
 }
 
 const mapStateToProps = ( state, ownProps ) => {
-  console.log( 'App mapStateToProps', state, ownProps );
   return {
     token: GetAuthToken( state )
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Profile from './Profile';
 import './header.css';
+
 const styles = {
 	container:{
 		backgroundColor:'#d42000',
@@ -20,9 +22,6 @@ const styles = {
 		verticalAlign:'middle',
 		lineHeight:'1em',
 		height:'0.8em',
-		alignSelf:'center',
-	},
-	button:{
 		alignSelf:'center'
 	}
 }
@@ -43,7 +42,7 @@ class Header extends Component{
 
 		return <div style={ styles.container } id="header">
 				<h1 style={ styles.heading }>Tim BitTrader</h1>
-				<a onClick={ e => { console.log( 'asdf' ) } } style={ styles.button }>Trade Now</a>
+				<Profile />
 			</div>;
 	}
 }

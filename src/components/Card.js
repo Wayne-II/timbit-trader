@@ -38,7 +38,7 @@ class Card extends Component{
 	}
 	render(){
 		const { firstName, lastName, number } = this.props;
-		const image = require(`../images/cards/${number}_${this.formatLastName( lastName )}_front.jpg`);
+		const image = require(`../images/series/timhortons-upperdeck-2018/${number}_${this.formatLastName( lastName )}_front.jpg`);
 		return <div style={{
 				display:'flex',
 				flexDirection:'row',

@@ -5,10 +5,12 @@
   "dependencies": {
     "google-fonts": "^1.0.0",
     "react": "^16.5.2",
+    "react-blockies": "^1.4.0",
     "react-csv-reader": "^0.3.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "react-scripts": "2.0.4"
