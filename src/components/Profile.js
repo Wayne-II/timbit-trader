@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { GetAuthToken } from '../store/user/selectors';
 import { connect } from 'react-redux';
+import TimbitBlockies from './TimbitBlockies';
 
 const styles = {
 	button:{
@@ -13,8 +14,8 @@ class Profile extends Component{
 
 		let ProfileOutput;
 
+		ProfileOutput = <TimbitBlockies />;
 		if( this.props.token ){
-			ProfileOutput = <a onClick={ e => { console.log( 'asdf' ) } } style={ styles.button }>Profile</a>;
 		} else {
 
 			ProfileOutput = <a onClick={ e => { console.log( 'asdf' ) } } style={ styles.button }>Trade Now</a>;

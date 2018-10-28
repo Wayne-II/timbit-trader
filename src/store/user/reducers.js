@@ -40,10 +40,13 @@ const meta = ( state = { isFetching:false }, action ) => {
 
 const authReducer = combineReducers( {
   auth,
-  meta
+  meta,
+  status
 } )
 
 export const GetAuthToken = state => state.auth.token;
 export const GetIsFetching = state => state.meta.isFetching;
+export const GetUserStatus = state => state.status;
+export const GetUserEmail = state => state.status.email;
 
 export default authReducer;

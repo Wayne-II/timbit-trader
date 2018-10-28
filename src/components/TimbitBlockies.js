@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Blockies from 'react-blockies';
 
-import {GetUserEmail} from '../store/'
+import {GetUserEmail} from '../store/user/selectors';
 
-class TimebitBlockies extends Component{
+class TimbitBlockies extends Component{
   render(){
     return <Blockies seed={this.props.email} />
   }
@@ -14,3 +15,7 @@ const mapStateToProps = state => {
     email:GetUserEmail( state )
   }
 }
+
+TimbitBlockies = connect( mapStateToProps )( TimbitBlockies );
+
+export default TimbitBlockies;

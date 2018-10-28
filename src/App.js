@@ -8,15 +8,7 @@ import { GetAuthToken } from './store/user/selectors';
 
 const styles = {
   app:{
-    background:`
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #202020 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #202020 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #111111 25%, #111111 50%, transparent 50%, transparent 75%, #242424 75%, #242424)`,
-    backgroundColor: '#131313',
-    backgroundSize:'20px 20px',
+
     position:'absolute',
     top:0,
     bottom:0,
@@ -30,7 +22,7 @@ class App extends Component {
   render() {
     const { token } = this.props;
 
-    const Content = token ? <CardList /> : <Auth />;
+    const Content = token || true ? <CardList /> : <Auth />;
 
     return (
       <div style={ styles.app } className="App">
